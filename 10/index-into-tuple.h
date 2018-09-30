@@ -4,6 +4,13 @@ static constexpr size_t index_into_tuple(size_t FlattenedIndex)
 {
 
     // YOUR CODE GOES HERE
+    size_t arr[] = { Sizes... };
+    size_t i = 0;
+    while (FlattenedIndex >= arr[i]) {
+        FlattenedIndex -= arr[i];
+        ++i;
+    }
+    return FlattenedIndex;
 
 }
 

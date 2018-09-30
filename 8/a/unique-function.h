@@ -18,7 +18,7 @@ struct ContainerVtable<R(A...)> {
     void (*destroy)(UF& self) noexcept;             // DESTROY
 };
 
-template<class R, class... A, class T>
+Template<class R, class... A, class T>
 struct ContainerVtableImpl<R(A...), T> {
     using UF = unique_function<R(A...)>;
     using HeldType = typename UF::template held_type<T>;
